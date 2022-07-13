@@ -30,16 +30,16 @@
     <link rel="stylesheet" href="~/la_mia_pizzeria_static.styles.css" asp-append-version="true" />
 </head>
 <header class="row">
-    <h3 class="col-12 justify-content-center align-items-center">
+    <h3 class="col-12 text-center my-4">
         Benvenuti! Ecco l'elenco delle pizze nel nostro menù'
     </h3>
 </header>
-<body>
+<body class="bg_grey">
     <div class="container">
-        <div class="row">
+        <div class="row gx-2">
             @foreach(Pizza pizza in listaPizze)
             {
-                <div class="col-4 text-center">
+                <div class="col-4 text-center card align-items-center justify-content-center">
                     <img src=@pizza.fotoLink class="w-100 h-50"/>
                     <h2>@pizza.name</h2>
                     <p>@pizza.description</p>
